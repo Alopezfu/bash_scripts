@@ -1,0 +1,12 @@
+#!/bin/bash
+
+clear
+OLDIP=$(cat ip)
+IPACTUAL=$(curl ifconfig.me)
+
+if [[ $OLDIP != $IPACTUAL ]]; then
+  echo "La ip ahora es: $IPACTUAL " | mail -s "La ip publica a cambiado." alejandrolopezfuentes789@gmail.com
+  echo $IPACTUAL > ip
+fi
+
+clear
