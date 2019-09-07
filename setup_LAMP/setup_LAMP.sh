@@ -35,11 +35,6 @@ function controller(){
 
     # INSTALL
     if [[ $opt -eq 1 ]]; then
-
-        clear
-        echo -e $bold"Updating system repositories..."$normal
-        echo "#######################################################"
-        apt update -y && apt upgrade -y
         
         clear
         echo $bold"Updates completed. Starting installation, this will take a few minutes..."$normal
